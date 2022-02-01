@@ -14,13 +14,15 @@ Module MultiplicationTable
         Dim factor As Integer = 12
         Dim countHori As Integer = 1
         Dim countVert As Integer = 1
+        Dim product As String = ""
 
 
         Console.WriteLine("Enjoy you " & factor & " x " & factor & " Multiplication Table:" & vbNewLine)
         For index = 1 To factor
             For count = 1 To factor
                 countHori = count * countVert
-                Console.Write(countHori & "  ")
+                product = CStr(countHori)
+                Console.Write(product.PadRight(5))
             Next
             countVert = countVert + 1
             Console.Write(vbNewLine)
